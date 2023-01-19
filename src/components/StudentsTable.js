@@ -16,7 +16,7 @@ const headings = [
 	'Rank',
 ];
 
-const SimpleTable = (context) => {
+const StudentsTable = (context) => {
 	const { state: { markLists }} = context;
 
 	return <div>
@@ -34,4 +34,4 @@ const SimpleTable = (context) => {
 	</div>;
 };
 
-export default SimpleTable;
+export default StudentsTable;

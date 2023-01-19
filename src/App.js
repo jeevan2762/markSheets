@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import './App.scss';
 import Add from './components/Add';
 import Input from './components/Input';
-import SimpleTable from './components/simpleTable';
+import StudentsTable from './components/StudentsTable';
 import markSheets from './service/markSheets';
 
 const initialMarks = {
@@ -23,7 +23,7 @@ const App = (context) => {
 	const extendedContext = { ...context, state, setState };
 
 	return <div className="App" role="App">
-		<SimpleTable { ...extendedContext }/>
+		<StudentsTable { ...extendedContext }/>
 		<Input { ...extendedContext }/>
 		<Add { ...extendedContext }/>
 	</div>;
