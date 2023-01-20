@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Input = (context) => {
+const InputBoxes = (context) => {
 	const { state, setState, config: { headers }} = context;
 	const { currentMarksheet } = state;
 
@@ -20,4 +20,4 @@ const Input = (context) => {
 	</td>);
 };
 
-export default Input;
+export default InputBoxes;
