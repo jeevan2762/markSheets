@@ -1,5 +1,6 @@
 import { React } from 'react';
 import addFields from '../service/studentManager';
+import Input from './Input';
 import tableData from './TableData';
 import tableHeader from './TableHeader';
 
@@ -26,9 +27,11 @@ const StudentsTable = (context) => {
 				<tr>
 					{headings.map(tableHeader)}
 				</tr>
+				<tr> <Input { ...context }/></tr>
 			</thead>
 			<tbody>
-				{addFields(markLists).map(tableData)}
+				{addFields(markLists).map((marks, key) =>
+					tableData({ ...context, data: { marks, key }}))}
 			</tbody>
 		</table>
 	</div>;

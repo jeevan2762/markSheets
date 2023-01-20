@@ -4,7 +4,7 @@ const Input = (context) => {
 	const { state, setState, config: { headers }} = context;
 	const { currentMarksheet } = state;
 
-	return headers.map((header, key) => <span key={ key }>
+	return headers.map((header, key) => <td key={ key }>
 		<label>{header}</label>
 		<input
 			type="text"
@@ -17,7 +17,7 @@ const Input = (context) => {
 				},
 			}) }
 		/>
-	</span>);
+	</td>);
 };
 
 export default Input;
