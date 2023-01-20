@@ -1,6 +1,5 @@
 import { React, useState } from 'react';
 import './App.scss';
-import Add from './components/Add';
 import StudentsTable from './components/StudentsTable';
 import markSheets from './service/markSheets';
 
@@ -23,7 +22,6 @@ const App = (context) => {
 
 	return <div className="App" role="App">
 		<StudentsTable { ...extendedContext }/>
-		<Add { ...extendedContext }/>
 	</div>;
 };
 
