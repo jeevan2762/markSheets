@@ -1,5 +1,6 @@
 import { React } from 'react';
 import addFields from '../service/studentManager';
+import Add from './Add';
 import Input from './Input';
 import tableData from './TableData';
 import tableHeader from './TableHeader';
@@ -15,6 +16,7 @@ const headings = [
 	'Total',
 	'Result',
 	'Rank',
+	'Buttons',
 ];
 
 const StudentsTable = (context) => {
@@ -27,7 +29,9 @@ const StudentsTable = (context) => {
 				<tr>
 					{headings.map(tableHeader)}
 				</tr>
-				<tr> <Input { ...context }/></tr>
+				<tr> <Input { ...context }/>
+					<td/><td/><td/>
+					<td><Add { ...context }/></td></tr>
 			</thead>
 			<tbody>
 				{addFields(markLists).map((marks, key) =>
