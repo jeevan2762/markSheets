@@ -5,10 +5,10 @@ const Input = (context) => {
 	const { currentMarksheet } = state;
 
 	return headers.map((header, key) => <td key={ key }>
-		<label>{header}</label>
 		<input
 			type="text"
-			style={ { width: '60px' } }
+			placeholder={ header }
+			style={ { width: '80px' } }
 			onChange={ (event) => setState({
 				...state,
 				currentMarksheet: {
