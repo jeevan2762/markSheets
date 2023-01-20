@@ -1,7 +1,8 @@
 import { React } from 'react';
 import addFields from '../service/studentManager';
 import Add from './Add';
-import Input from './Input';
+import EmptyCell from './EmptyCell';
+import InputBoxes from './InputBoxes';
 import tableData from './TableData';
 import tableHeader from './TableHeader';
 
@@ -26,11 +27,11 @@ const StudentsTable = (context) => {
 		<h1>Marksheet</h1>
 		<table className="tableStyle">
 			<thead>
-				<tr>
-					{headings.map(tableHeader)}
-				</tr>
-				<tr> <Input { ...context }/>
-					<td/><td/><td/>
+				<tr>{headings.map(tableHeader)}</tr>
+				<tr><InputBoxes { ...context }/>
+					<EmptyCell/>
+					<EmptyCell/>
+					<EmptyCell/>
 					<td><Add { ...context }/></td></tr>
 			</thead>
 			<tbody>
