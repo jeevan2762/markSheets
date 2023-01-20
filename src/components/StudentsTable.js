@@ -34,8 +34,7 @@ const StudentsTable = (context) => {
 					<td><Add { ...context }/></td></tr>
 			</thead>
 			<tbody>
-				{addFields(markLists).map((marks, key) =>
-					tableData({ ...context, data: { marks, key }}))}
+				{addFields(markLists).map(tableData)}
 			</tbody>
 		</table>
 	</div>;
