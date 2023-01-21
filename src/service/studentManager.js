@@ -1,4 +1,7 @@
+import { rndString } from '@laufire/utils/random';
+
 const passMark = 35;
+const idLength = 5;
 const getTotal = (student) => {
 	const { tamil, english, maths, science, social } = student;
 
@@ -36,6 +39,7 @@ const processData = (student) => ({
 	...student,
 	total: getTotal(student),
 	result: getResult(student),
+	id: rndString(idLength),
 });
 
 const addFields = (student) => {
