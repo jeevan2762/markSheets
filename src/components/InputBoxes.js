@@ -1,10 +1,10 @@
 import React from 'react';
 
 const InputBoxes = (context) => {
-	const { state, setState, config: { headers }} = context;
+	const { state, setState, config: { inputs }} = context;
 	const { currentMarksheet } = state;
 
-	return headers.map((header, key) => <td key={ key }>
+	return inputs.map((header, key) => <td key={ key }>
 		<input
 			type="text"
 			placeholder={ header }

@@ -2,7 +2,7 @@ import { map, values } from '@laufire/utils/collection';
 import { React } from 'react';
 
 const tableData = (marks, index) =>
-	<tr key={ index }>
+	<tr key={ index } className="rowStyle">
 		{
 			values(map(marks, (mark, key) =>
 				<td

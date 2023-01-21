@@ -6,28 +6,16 @@ import InputBoxes from './InputBoxes';
 import tableData from './TableData';
 import tableHeader from './TableHeader';
 
-const headings = [
-	'RollNo',
-	'Name',
-	'Tamil',
-	'English',
-	'Maths',
-	'Science',
-	'Social',
-	'Total',
-	'Result',
-	'Rank',
-	'Buttons',
-];
-
 const StudentsTable = (context) => {
-	const { state: { markLists }} = context;
+	const { state: { markLists }, config: { inputs, headings }} = context;
+
+	const array = [...inputs, ...headings];
 
 	return <div>
 		<h1>Marksheet</h1>
 		<table className="tableStyle">
 			<thead>
-				<tr>{headings.map(tableHeader)}</tr>
+				<tr>{array.map(tableHeader)}</tr>
 				<tr><InputBoxes { ...context }/>
 					<EmptyCell/>
 					<EmptyCell/>

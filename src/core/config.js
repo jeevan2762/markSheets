@@ -1,5 +1,5 @@
 const config = {
-	headers: [
+	inputs: [
 		'rollNo',
 		'name',
 		'tamil',
@@ -7,6 +7,12 @@ const config = {
 		'maths',
 		'science',
 		'social',
+	],
+	headings: [
+		'total',
+		'result',
+		'rank',
+		'buttons',
 	],
 };
 
