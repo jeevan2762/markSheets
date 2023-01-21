@@ -1,11 +1,10 @@
 import { React } from 'react';
 
 const tableData = (context) => {
-	const { data: { marks, index }} = context;
-	const { config: { inputs, headings }} = context;
+	const { data: { marks, index, headers }} = context;
 
 	return <tr key={ index } className="rowStyle">
-		{[...inputs, ...headings].map((header, key) =>
+		{headers.map((header, key) =>
 			<td
 				key={ key }
 				className="rowStyle"

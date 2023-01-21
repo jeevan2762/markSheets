@@ -1,31 +1,23 @@
-/* eslint-disable max-lines-per-function */
 import { React } from 'react';
 import addFields from '../service/studentManager';
-import Add from './Add';
-import EmptyCell from './EmptyCell';
-import InputBoxes from './InputBoxes';
 import tableData from './TableData';
 import tableHeader from './TableHeader';
+import TableRows from './TableRows';
 
 const StudentsTable = (context) => {
 	const { state: { markLists }, config: { inputs, headings }} = context;
-
-	const array = [...inputs, ...headings];
+	const headers = [...inputs, ...headings];
 
 	return <div>
 		<h1>Marksheet</h1>
 		<table className="tableStyle">
 			<thead>
-				<tr>{array.map(tableHeader)}</tr>
-				<tr><InputBoxes { ...context }/>
-					<EmptyCell/>
-					<EmptyCell/>
-					<EmptyCell/>
-					<td><Add { ...context }/></td></tr>
+				<tr>{headers.map(tableHeader)}</tr>
+				<TableRows { ...context }/>
 			</thead>
 			<tbody>
 				{addFields(markLists).map((marks, index) =>
-					tableData({ ...context, data: { marks, index }}))}
+					tableData({ ...context, data: { marks, index, headers }}))}
 			</tbody>
 		</table>
 	</div>;

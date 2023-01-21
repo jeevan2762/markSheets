@@ -5,18 +5,17 @@ const InputBoxes = (context) => {
 	const { currentMarksheet } = state;
 
 	return inputs.map((header, key) => <td key={ key }>
-		<input
-			type="text"
-			value={ currentMarksheet[header] }
-			placeholder={ header }
-			style={ { width: '80px' } }
-			onChange={ (event) => setState({
+		<input { ...{ type: 'text',
+			value: currentMarksheet[header],
+			placeholder: header,
+			style: { width: '80px' },
+			onChange: ({ target: { value }}) => setState({
 				...state,
 				currentMarksheet: {
 					...currentMarksheet,
-					[header]: event.target.value,
+					[header]: header !== 'name' ? Number(value) : value,
 				},
-			}) }
+			}) } }
 		/>
 	</td>);
 };
