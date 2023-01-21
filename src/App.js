@@ -6,13 +6,13 @@ import markSheets from './service/markSheets';
 const initialMarks = {
 	markLists: markSheets,
 	currentMarksheet: {
-		rollNo: '',
-		name: '',
-		tamil: '',
-		english: '',
-		maths: '',
-		science: '',
-		social: '',
+		rollNo: 15,
+		name: 'jee',
+		tamil: 80,
+		english: 98,
+		maths: 75,
+		science: 85,
+		social: 90,
 	},
 };
 

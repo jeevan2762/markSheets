@@ -7,6 +7,7 @@ const InputBoxes = (context) => {
 	return inputs.map((header, key) => <td key={ key }>
 		<input
 			type="text"
+			value={ currentMarksheet[header] }
 			placeholder={ header }
 			style={ { width: '80px' } }
 			onChange={ (event) => setState({
