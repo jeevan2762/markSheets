@@ -1,6 +1,6 @@
 import { React } from 'react';
 
-const tableHeader = (details, index) =>
+const TableHeader = (details, index) =>
 	<th key={ index } className="headerStyle">{details}</th>;
 
-export default tableHeader;
+export default TableHeader;

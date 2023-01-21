@@ -1,8 +1,8 @@
 import { React } from 'react';
 import addFields from '../service/studentManager';
-import tableData from './TableData';
-import tableHeader from './TableHeader';
-import TableRows from './TableRows';
+import MarkSheet from './Marksheet';
+import TableHeader from './TableHeader';
+import InputHeaders from './InputHeaders';
 
 const StudentsTable = (context) => {
 	const { state: { markLists }, config: { inputs, headings }} = context;
@@ -12,12 +12,14 @@ const StudentsTable = (context) => {
 		<h1>Marksheet</h1>
 		<table className="tableStyle">
 			<thead>
-				<tr>{headers.map(tableHeader)}</tr>
-				<TableRows { ...context }/>
+				<tr>
+					{headers.map(TableHeader)}
+				</tr>
+				<InputHeaders { ...context }/>
 			</thead>
 			<tbody>
 				{addFields(markLists).map((marks, index) =>
-					tableData({ ...context, data: { marks, index, headers }}))}
+					MarkSheet({ ...context, data: { marks, index, headers }}))}
 			</tbody>
 		</table>
 	</div>;

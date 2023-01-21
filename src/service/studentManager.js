@@ -3,11 +3,8 @@ import { rndString } from '@laufire/utils/random';
 const passMark = 35;
 const idLength = 5;
 
-const getTotal = (student) => {
-	const { tamil, english, maths, science, social } = student;
-
-	return tamil + english + maths + science + social;
-};
+const getTotal = ({ tamil, english, maths, science, social }) =>
+	tamil + english + maths + science + social;
 
 const getResult = (student) => (Math.min(
 	student.tamil,

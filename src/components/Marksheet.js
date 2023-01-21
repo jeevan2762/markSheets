@@ -1,6 +1,6 @@
 import { React } from 'react';
 
-const tableData = (context) => {
+const MarkSheet = (context) => {
 	const { data: { marks, index, headers }} = context;
 
 	return <tr key={ index } className="rowStyle">
@@ -12,4 +12,4 @@ const tableData = (context) => {
 	</tr>;
 };
 
-export default tableData;
+export default MarkSheet;
