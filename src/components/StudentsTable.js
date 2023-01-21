@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { React } from 'react';
 import addFields from '../service/studentManager';
 import Add from './Add';
@@ -23,7 +24,8 @@ const StudentsTable = (context) => {
 					<td><Add { ...context }/></td></tr>
 			</thead>
 			<tbody>
-				{addFields(markLists).map(tableData)}
+				{addFields(markLists).map((marks, index) =>
+					tableData({ ...context, data: { marks, index }}))}
 			</tbody>
 		</table>
 	</div>;
