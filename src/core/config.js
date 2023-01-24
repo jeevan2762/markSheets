@@ -1,18 +1,60 @@
 const config = {
-	inputs: [
-		'rollNo',
-		'name',
-		'tamil',
-		'english',
-		'maths',
-		'science',
-		'social',
-	],
-	headings: [
-		'total',
-		'result',
-		'rank',
-		'buttons',
+	fields: [
+		{
+			name: 'rollNo',
+			type: 'number',
+			input: true,
+		},
+		{
+			name: 'name',
+			type: 'text',
+			input: true,
+		},
+		{
+			name: 'tamil',
+			type: 'number',
+			input: true,
+		},
+		{
+			name: 'english',
+			type: 'number',
+			input: true,
+		},
+		{
+			name: 'maths',
+			type: 'number',
+			input: true,
+		},
+		{
+			name: 'science',
+			type: 'number',
+			input: true,
+		},
+		{
+			name: 'social',
+			type: 'number',
+			input: true,
+		},
+		{
+			name: 'total',
+			type: 'number',
+			input: false,
+		},
+		{
+			name: 'result',
+			type: 'text',
+			input: false,
+		},
+		{
+			name: 'rank',
+			type: 'number',
+			input: false,
+		},
+		{
+			name: 'buttons',
+			type: 'text',
+			input: false,
+		},
 	],
 };
 

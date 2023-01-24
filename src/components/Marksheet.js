@@ -1,14 +1,14 @@
 import { React } from 'react';
 
 const MarkSheet = (context) => {
-	const { data: { marks, index, headers }} = context;
+	const { data: { marks, fields }} = context;
 
-	return <tr key={ index } className="rowStyle">
-		{headers.map((header, key) =>
+	return <tr className="rowStyle">
+		{fields.map((field, key) =>
 			<td
 				key={ key }
 				className="rowStyle"
-			>{marks[header]}</td>)}
+			>{marks[field.name]}</td>)}
 	</tr>;
 };
 

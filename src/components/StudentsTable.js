@@ -5,21 +5,20 @@ import TableHeader from './TableHeader';
 import InputHeaders from './InputHeaders';
 
 const StudentsTable = (context) => {
-	const { state: { markLists }, config: { inputs, headings }} = context;
-	const headers = [...inputs, ...headings];
+	const { state: { markLists }, config: { fields }} = context;
 
 	return <div>
 		<h1>Marksheet</h1>
 		<table className="tableStyle">
 			<thead>
 				<tr>
-					{headers.map(TableHeader)}
+					{fields.map((field) => TableHeader(field))}
 				</tr>
 				<InputHeaders { ...context }/>
 			</thead>
 			<tbody>
 				{addFields(markLists).map((marks, index) =>
-					MarkSheet({ ...context, data: { marks, index, headers }}))}
+					MarkSheet({ ...context, data: { marks, index, fields }}))}
 			</tbody>
 		</table>
 	</div>;
