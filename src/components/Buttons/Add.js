@@ -1,7 +1,8 @@
+import { rndString } from '@laufire/utils/random';
 import { React } from 'react';
 
 const Add = (context) => {
-	const { state, setState } = context;
+	const { state, setState, config: { idLength }} = context;
 	const { currentMarksheet, markLists } = state;
 
 	return (
@@ -9,7 +10,8 @@ const Add = (context) => {
 			<button
 				onClick={ () => setState({
 					...state,
-					markLists: [...markLists, currentMarksheet],
+					markLists: [...markLists, { ...currentMarksheet,
+						id: rndString(idLength) }],
 				}) }
 			>Add
 			</button>
