@@ -1,5 +1,5 @@
 import { React } from 'react';
-import Delete from './Delete';
+import Delete from './Buttons/Delete';
 
 const MarkSheet = (context) => {
 	const { data: { marks, fields }} = context;

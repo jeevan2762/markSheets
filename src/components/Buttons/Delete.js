@@ -1,5 +1,5 @@
 import React from 'react';
-import MarkSheetManager from '../services/MarkSheetManager';
+import MarkSheetManager from '../../services/MarkSheetManager';
 
 const Delete = (context) => {
 	const { state, setState } = context;

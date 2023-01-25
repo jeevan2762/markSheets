@@ -1,5 +1,5 @@
 import { React } from 'react';
-import Add from './Add';
+import Add from './Buttons/Add';
 import EmptyCell from './EmptyCell';
 import InputBoxes from './Input/InputBoxes';
 
