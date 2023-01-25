@@ -1,10 +1,10 @@
 import { React, useState } from 'react';
 import './App.scss';
 import StudentsTable from './components/StudentsTable';
-import markSheets from './service/markSheets';
+import addId from './service/addId';
 
-const initialMarks = {
-	markLists: markSheets,
+const getInitialMarkSheet = (context) => ({
+	markLists: addId(context),
 	currentMarksheet: {
 		rollNo: 15,
 		name: 'jee',
@@ -14,10 +14,10 @@ const initialMarks = {
 		science: 85,
 		social: 90,
 	},
-};
+});
 
 const App = (context) => {
-	const [state, setState] = useState(initialMarks);
+	const [state, setState] = useState(getInitialMarkSheet(context));
 	const extendedContext = { ...context, state, setState };
 
 	return <div className="App" role="App">

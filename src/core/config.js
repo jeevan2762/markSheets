@@ -50,12 +50,8 @@ const config = {
 			type: 'number',
 			input: false,
 		},
-		{
-			name: 'buttons',
-			type: 'text',
-			input: false,
-		},
 	],
+	idLength: 5,
 };
 
 export default config;

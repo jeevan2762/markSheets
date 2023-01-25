@@ -1,4 +1,5 @@
 import { React } from 'react';
+import Delete from './Delete';
 
 const MarkSheet = (context) => {
 	const { data: { marks, fields }} = context;
@@ -9,6 +10,7 @@ const MarkSheet = (context) => {
 				key={ key }
 				className="rowStyle"
 			>{marks[field.name]}</td>)}
+		<Delete { ...context }/>
 	</tr>;
 };
 

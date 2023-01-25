@@ -1,7 +1,7 @@
 import { React } from 'react';
 import Add from './Add';
 import EmptyCell from './EmptyCell';
-import InputBoxes from './InputBoxes';
+import InputBoxes from './Input/InputBoxes';
 
 const InputHeaders = (context) =>
 	<tr>

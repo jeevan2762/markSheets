@@ -17,8 +17,8 @@ const StudentsTable = (context) => {
 				<InputHeaders { ...context }/>
 			</thead>
 			<tbody>
-				{addFields(markLists).map((marks, index) =>
-					MarkSheet({ ...context, data: { marks, index, fields }}))}
+				{addFields(markLists).map((marks) =>
+					MarkSheet({ ...context, data: { marks, fields }}))}
 			</tbody>
 		</table>
 	</div>;
