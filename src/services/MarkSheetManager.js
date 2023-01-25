@@ -13,7 +13,7 @@ const genMarkSheets = (context) => {
 };
 
 const removeMarkSheet = (context) => {
-	const { state: { markLists }, data: { marks: { id }}} = context;
+	const { state: { markLists }, data: { markSheet: { id }}} = context;
 
 	return markLists.filter((markList) =>
 		id !== markList.id);
