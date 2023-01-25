@@ -1,8 +1,8 @@
 import { React } from 'react';
-import addFields from '../service/studentManager';
 import MarkSheet from './Marksheet';
 import TableHeader from './TableHeader';
 import InputHeaders from './InputHeaders';
+import MarkSheetManager from '../services/MarkSheetManager';
 
 const StudentsTable = (context) => {
 	const { state: { markLists }, config: { fields }} = context;
@@ -17,7 +17,7 @@ const StudentsTable = (context) => {
 				<InputHeaders { ...context }/>
 			</thead>
 			<tbody>
-				{addFields(markLists).map((marks) =>
+				{MarkSheetManager.addFields(markLists).map((marks) =>
 					MarkSheet({ ...context, data: { marks, fields }}))}
 			</tbody>
 		</table>

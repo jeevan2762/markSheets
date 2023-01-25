@@ -1,5 +1,5 @@
 import React from 'react';
-import filterData from '../service/filterData';
+import MarkSheetManager from '../services/MarkSheetManager';
 
 const Delete = (context) => {
 	const { state, setState } = context;
@@ -8,7 +8,7 @@ const Delete = (context) => {
 		<button
 			onClick={ () => setState({
 				...state,
-				markLists: filterData(context),
+				markLists: MarkSheetManager.removeMarkSheet(context),
 			}) }
 		>Delete</button>);
 };

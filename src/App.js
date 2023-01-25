@@ -1,10 +1,10 @@
 import { React, useState } from 'react';
 import './App.scss';
 import StudentsTable from './components/StudentsTable';
-import addId from './service/addId';
+import MarkSheetManager from './services/MarkSheetManager';
 
 const getInitialMarkSheet = (context) => ({
-	markLists: addId(context),
+	markLists: MarkSheetManager.genMarkSheets(context),
 	currentMarksheet: {
 		rollNo: 15,
 		name: 'jee',
