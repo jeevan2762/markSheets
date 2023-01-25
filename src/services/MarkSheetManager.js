@@ -1,5 +1,5 @@
 import { rndString } from '@laufire/utils/random';
-import markSheets from './markSheets';
+import markSheets from '../Data/markSheets';
 
 const passMark = 35;
 
